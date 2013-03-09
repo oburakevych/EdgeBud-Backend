@@ -4,7 +4,6 @@
 package com.edgebud.business.project.comment;
 
 import com.edgebud.business.project.comment.Comment;
-
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

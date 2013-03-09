@@ -2,7 +2,6 @@ package com.edgebud.business.project;
 
 import com.edgebud.business.company.Company;
 import com.edgebud.business.project.comment.Comment;
-
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -40,19 +39,18 @@ public class Project {
 
     @Size(max = 8192)
     private String description;
-    
-    @NotNull
-    @ManyToOne
-    private Company company;
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Comment> comments = new HashSet<Comment>();
 
-    private String imageUrl;
+    private String imageName;
 
-    private String videoUrl;
+    private String videoName;
 
     @NotNull
     @Enumerated
     private ProjectStatus status;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Company company;
 }

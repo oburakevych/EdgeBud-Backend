@@ -7,7 +7,6 @@ import com.edgebud.business.company.Company;
 import com.edgebud.business.project.Project;
 import com.edgebud.business.project.ProjectStatus;
 import com.edgebud.business.project.comment.Comment;
-
 import java.util.Date;
 import java.util.Set;
 
@@ -45,14 +44,6 @@ privileged aspect Project_Roo_JavaBean {
         this.description = description;
     }
     
-    public Company Project.getCompany() {
-        return this.company;
-    }
-    
-    public void Project.setCompany(Company company) {
-        this.company = company;
-    }
-    
     public Set<Comment> Project.getComments() {
         return this.comments;
     }
@@ -61,20 +52,20 @@ privileged aspect Project_Roo_JavaBean {
         this.comments = comments;
     }
     
-    public String Project.getImageUrl() {
-        return this.imageUrl;
+    public String Project.getImageName() {
+        return this.imageName;
     }
     
-    public void Project.setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void Project.setImageName(String imageName) {
+        this.imageName = imageName;
     }
     
-    public String Project.getVideoUrl() {
-        return this.videoUrl;
+    public String Project.getVideoName() {
+        return this.videoName;
     }
     
-    public void Project.setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+    public void Project.setVideoName(String videoName) {
+        this.videoName = videoName;
     }
     
     public ProjectStatus Project.getStatus() {
@@ -83,6 +74,14 @@ privileged aspect Project_Roo_JavaBean {
     
     public void Project.setStatus(ProjectStatus status) {
         this.status = status;
+    }
+    
+    public Company Project.getCompany() {
+        return this.company;
+    }
+    
+    public void Project.setCompany(Company company) {
+        this.company = company;
     }
     
 }

@@ -4,7 +4,6 @@
 package com.edgebud.business.project.comment;
 
 import com.edgebud.business.project.comment.Comment;
-
 import org.springframework.beans.factory.annotation.Configurable;
 
 privileged aspect Comment_Roo_Configurable {

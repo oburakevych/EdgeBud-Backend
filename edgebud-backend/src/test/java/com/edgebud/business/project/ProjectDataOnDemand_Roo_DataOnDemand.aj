@@ -3,7 +3,7 @@
 
 package com.edgebud.business.project;
 
-import com.edgebud.business.company.Company;
+import com.edgebud.business.company.CompanyDataOnDemand;
 import com.edgebud.business.project.Project;
 import com.edgebud.business.project.ProjectDataOnDemand;
 import com.edgebud.business.project.ProjectStatus;
@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
@@ -27,22 +28,19 @@ privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
     
     private List<Project> ProjectDataOnDemand.data;
     
+    @Autowired
+    CompanyDataOnDemand ProjectDataOnDemand.companyDataOnDemand;
+    
     public Project ProjectDataOnDemand.getNewTransientProject(int index) {
         Project obj = new Project();
-        setCompany(obj, index);
         setCreated(obj, index);
         setDescription(obj, index);
         setId(obj, index);
-        setImageUrl(obj, index);
+        setImageName(obj, index);
         setName(obj, index);
         setStatus(obj, index);
-        setVideoUrl(obj, index);
+        setVideoName(obj, index);
         return obj;
-    }
-    
-    public void ProjectDataOnDemand.setCompany(Project obj, int index) {
-        Company company = null;
-        obj.setCompany(company);
     }
     
     public void ProjectDataOnDemand.setCreated(Project obj, int index) {
@@ -63,9 +61,9 @@ privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
         obj.setId(id);
     }
     
-    public void ProjectDataOnDemand.setImageUrl(Project obj, int index) {
-        String imageUrl = "imageUrl_" + index;
-        obj.setImageUrl(imageUrl);
+    public void ProjectDataOnDemand.setImageName(Project obj, int index) {
+        String imageName = "imageName_" + index;
+        obj.setImageName(imageName);
     }
     
     public void ProjectDataOnDemand.setName(Project obj, int index) {
@@ -78,9 +76,9 @@ privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
         obj.setStatus(status);
     }
     
-    public void ProjectDataOnDemand.setVideoUrl(Project obj, int index) {
-        String videoUrl = "videoUrl_" + index;
-        obj.setVideoUrl(videoUrl);
+    public void ProjectDataOnDemand.setVideoName(Project obj, int index) {
+        String videoName = "videoName_" + index;
+        obj.setVideoName(videoName);
     }
     
     public Project ProjectDataOnDemand.getSpecificProject(int index) {

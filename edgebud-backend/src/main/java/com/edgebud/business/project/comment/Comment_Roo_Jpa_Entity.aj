@@ -4,7 +4,6 @@
 package com.edgebud.business.project.comment;
 
 import com.edgebud.business.project.comment.Comment;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

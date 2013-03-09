@@ -4,7 +4,6 @@
 package com.edgebud.business.project.comment;
 
 import com.edgebud.business.project.comment.Comment;
-
 import java.util.Date;
 
 privileged aspect Comment_Roo_JavaBean {

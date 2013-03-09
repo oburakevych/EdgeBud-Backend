@@ -63,3 +63,14 @@ test stub --class ~.business.project.Project
 test integration --entity ~.business.project.Project
 test integration --entity ~.business.company.Company
 test integration --entity ~.business.project.comment.Comment
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 17:14:57
+// [failed] field set --class ~.business.project.Project --fieldName tags --type java.lang.String
+// [failed] field set --class ~.business.project.Project --fieldName tags --type String
+hint
+// [failed] field set --type java.lang.String --fieldName tags
+// [failed] field set --type String --fieldName tags
+help
+perform package
+field reference --type ~.business.company.Company --fieldName company
+help
+entity jpa --class ~.business.project.Project --testAutomatically true

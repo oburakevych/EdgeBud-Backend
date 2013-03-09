@@ -4,7 +4,6 @@
 package com.edgebud.business.project.comment;
 
 import com.edgebud.business.project.comment.Comment;
-
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 

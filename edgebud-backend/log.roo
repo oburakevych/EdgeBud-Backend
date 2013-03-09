@@ -1,0 +1,65 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 13:46:32
+project --topLevelPackage com.edgebud --projectName edgebud-backend --java 6 --packaging WAR
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 13:46:41
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 13:48:49
+hint
+jpa setup --database MYSQL --provider HIBERNATE --hostName localhost --databaseName edgebud --userName edgebud --password 123edgebud456789
+hint
+entity jpa --class com.edgebud.dusiness.project.Project --testAutomatically 
+entity jpa --class com.edgebud.dusiness.project.comment.Comment --testAutomatically 
+hint
+field other --type java.util.UUID --fieldName id
+field date --fieldName created --type java.util.Date
+field string --fieldName text
+// [failed] field other --type java.util.UUID --fieldName id --class ~.business.project.Project --notNull 
+// [failed] field other --type java.util.UUID --fieldName id --class ~.business.project.Project --notNull 
+// [failed] field other --type java.util.UUID --fieldName id --class com.edgebud.business.project.Project --notNull
+help
+perform clean
+// [failed] field other --type java.util.UUID --fieldName id --notNull
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 14:06:19
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 14:06:42
+field other --type java.util.UUID --fieldName id --notNull --class ~.business.project.Project
+field string --fieldName name --notNull
+field date --fieldName created --type java.util.Date
+field string --fieldName description --sizeMax 8192
+field set --fieldName comments --type ~.dusiness.project.comment.Comment --
+help
+json all 
+web mvc json setup
+web mvc json all 
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 14:17:06
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 14:18:49
+help
+web mvc setup
+hint
+field string --fieldName imageUrl --class ~.business.project.Project
+field string --fieldName videoUrl --class ~.business.project.Project
+field enum --fieldName status --type ~.business.project.Status --notNull true
+entity jpa --class com.edgebud.business.Company --testAutomatically true
+web mvc controller --class ~.business.Company
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 15:56:22
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 15:56:37
+web mvc controller --class ~.business.company.CompanyController
+json all 
+web mvc json all 
+web mvc json all --package com.edgebud.business.company
+field string --fieldName id --class ~.business.company.Company --notNull 
+field string --fieldName name --notNull --sizeMax 24
+field string --fieldName description --sizeMax 1024
+field string email 
+field string url
+field reference --fieldName company --type ~.business.company.Company --notNull 
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 16:05:17
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 16:06:41
+test stub --class ~.business.company.Company
+test stub --class ~.business.project.Project
+// [failed] test stub --class ~.business.project.comment.Comment
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 16:08:41
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 16:09:00
+// [failed] test integration --entity ~.business.company.Company
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-09 16:15:18
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-09 16:15:39
+test integration --entity ~.business.project.Project
+test integration --entity ~.business.company.Company
+test integration --entity ~.business.project.comment.Comment

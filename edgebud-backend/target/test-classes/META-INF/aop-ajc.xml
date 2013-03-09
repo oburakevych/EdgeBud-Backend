@@ -1,0 +1,17 @@
+<aspectj>
+<aspects>
+<aspect name="com.edgebud.business.company.CompanyIntegrationTest_Roo_Configurable"/>
+<aspect name="com.edgebud.business.project.comment.CommentDataOnDemand_Roo_Configurable"/>
+<aspect name="com.edgebud.business.project.comment.CommentDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.edgebud.business.company.CompanyIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.edgebud.business.company.CompanyDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.edgebud.business.project.ProjectIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.edgebud.business.project.comment.CommentIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.edgebud.business.project.ProjectDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.edgebud.business.project.ProjectDataOnDemand_Roo_Configurable"/>
+<aspect name="com.edgebud.business.company.CompanyDataOnDemand_Roo_Configurable"/>
+<aspect name="com.edgebud.business.project.ProjectIntegrationTest_Roo_Configurable"/>
+<aspect name="com.edgebud.business.project.comment.CommentIntegrationTest_Roo_Configurable"/>
+</aspects>
+</aspectj>
+

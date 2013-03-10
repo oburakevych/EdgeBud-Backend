@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderBy;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -41,6 +42,7 @@ public class Project {
     private String description;
 
     @ManyToMany(cascade = CascadeType.ALL)
+    @OrderBy("created")
     private Set<Comment> comments = new HashSet<Comment>();
 
     private String imageName;

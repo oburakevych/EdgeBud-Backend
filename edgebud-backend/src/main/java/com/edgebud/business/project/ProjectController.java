@@ -1,5 +1,6 @@
 package com.edgebud.business.project;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.slf4j.Logger;
@@ -32,9 +33,15 @@ public class ProjectController {
         project.persist();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
-        headers.set("Access-Control-Allow-Origin", "*");
-        headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        headers.set("Access-Control-Max-Age", "86400");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+    }
+	
+    @RequestMapping(headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> listJson() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        List<Project> result = Project.findAllProjects();
+        return new ResponseEntity<String>(Project.toJsonArray(result), headers, HttpStatus.OK);
     }
 }

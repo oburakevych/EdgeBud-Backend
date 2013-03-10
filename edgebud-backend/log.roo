@@ -74,3 +74,5 @@ perform package
 field reference --type ~.business.company.Company --fieldName company
 help
 entity jpa --class ~.business.project.Project --testAutomatically true
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-10 00:20:31
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-10 12:31:21

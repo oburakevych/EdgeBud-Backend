@@ -25,7 +25,7 @@ privileged aspect Project_Roo_Jpa_ActiveRecord {
     }
     
     public static List<Project> Project.findAllProjects() {
-        return entityManager().createQuery("SELECT o FROM Project o", Project.class).getResultList();
+        return entityManager().createQuery("SELECT o FROM Project o order by o.created desc", Project.class).getResultList();
     }
     
     public static Project Project.findProject(Long id_) {

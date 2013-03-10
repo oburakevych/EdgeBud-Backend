@@ -12,6 +12,7 @@
 <aspect name="com.edgebud.business.company.Company_Roo_Jpa_Entity"/>
 <aspect name="com.edgebud.business.project.comment.Comment_Roo_Jpa_ActiveRecord"/>
 <aspect name="com.edgebud.business.project.Project_Roo_Json"/>
+<aspect name="com.edgebud.business.project.ProjectController_Roo_Controller_Json"/>
 <aspect name="com.edgebud.business.project.comment.Comment_Roo_Configurable"/>
 <aspect name="com.edgebud.business.project.comment.Comment_Roo_Jpa_Entity"/>
 <aspect name="com.edgebud.business.project.comment.CommentController_Roo_Controller_Json"/>

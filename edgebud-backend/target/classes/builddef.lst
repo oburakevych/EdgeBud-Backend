@@ -16,6 +16,7 @@ UTF-8
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/project/comment/Comment_Roo_Configurable.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/project/Project_Roo_Json.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/company/Company_Roo_ToString.aj
+/Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/project/ProjectController_Roo_Controller_Json.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/project/Project_Roo_Jpa_ActiveRecord.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/company/Company_Roo_Jpa_ActiveRecord.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/company/Company_Roo_Jpa_Entity.aj

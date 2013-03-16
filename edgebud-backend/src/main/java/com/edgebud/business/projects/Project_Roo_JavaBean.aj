@@ -37,6 +37,22 @@ privileged aspect Project_Roo_JavaBean {
         this.created = created;
     }
     
+    public Date Project.getStartDate() {
+        return this.startDate;
+    }
+    
+    public void Project.setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+    
+    public Date Project.getEndDate() {
+        return this.endDate;
+    }
+    
+    public void Project.setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+    
     public String Project.getDescription() {
         return this.description;
     }

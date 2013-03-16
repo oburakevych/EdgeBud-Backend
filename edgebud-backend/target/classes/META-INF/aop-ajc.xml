@@ -1,26 +1,30 @@
 <aspectj>
 <aspects>
-<aspect name="com.edgebud.business.project.Project_Roo_Configurable"/>
-<aspect name="com.edgebud.business.project.comment.Comment_Roo_Json"/>
-<aspect name="com.edgebud.business.company.Company_Roo_ToString"/>
-<aspect name="com.edgebud.business.project.comment.Comment_Roo_ToString"/>
-<aspect name="com.edgebud.business.company.Company_Roo_Jpa_ActiveRecord"/>
-<aspect name="com.edgebud.business.project.Project_Roo_JavaBean"/>
-<aspect name="com.edgebud.business.project.Project_Roo_Jpa_Entity"/>
-<aspect name="com.edgebud.business.company.Company_Roo_Configurable"/>
-<aspect name="com.edgebud.business.project.comment.Comment_Roo_JavaBean"/>
-<aspect name="com.edgebud.business.company.Company_Roo_Jpa_Entity"/>
-<aspect name="com.edgebud.business.project.comment.Comment_Roo_Jpa_ActiveRecord"/>
-<aspect name="com.edgebud.business.project.Project_Roo_Json"/>
-<aspect name="com.edgebud.business.project.ProjectController_Roo_Controller_Json"/>
-<aspect name="com.edgebud.business.project.comment.Comment_Roo_Configurable"/>
-<aspect name="com.edgebud.business.project.comment.Comment_Roo_Jpa_Entity"/>
-<aspect name="com.edgebud.business.project.comment.CommentController_Roo_Controller_Json"/>
-<aspect name="com.edgebud.business.project.Project_Roo_ToString"/>
-<aspect name="com.edgebud.business.company.Company_Roo_JavaBean"/>
-<aspect name="com.edgebud.business.project.Project_Roo_Jpa_ActiveRecord"/>
-<aspect name="com.edgebud.business.company.CompanyController_Roo_Controller_Json"/>
-<aspect name="com.edgebud.business.company.Company_Roo_Json"/>
+<aspect name="com.edgebud.business.companies.Company_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.edgebud.business.projects.opportunities.Opportunity_Roo_Configurable"/>
+<aspect name="com.edgebud.business.projects.comments.Comment_Roo_Jpa_Entity"/>
+<aspect name="com.edgebud.business.projects.comments.Comment_Roo_Configurable"/>
+<aspect name="com.edgebud.business.companies.CompanyController_Roo_Controller_Json"/>
+<aspect name="com.edgebud.business.projects.Project_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.edgebud.business.projects.Project_Roo_Jpa_Entity"/>
+<aspect name="com.edgebud.business.projects.opportunities.Opportunity_Roo_Jpa_Entity"/>
+<aspect name="com.edgebud.business.projects.Project_Roo_JavaBean"/>
+<aspect name="com.edgebud.business.projects.comments.Comment_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.edgebud.business.projects.ProjectController_Roo_Controller_Json"/>
+<aspect name="com.edgebud.business.projects.comments.CommentController_Roo_Controller_Json"/>
+<aspect name="com.edgebud.business.projects.comments.Comment_Roo_Json"/>
+<aspect name="com.edgebud.business.companies.Company_Roo_Json"/>
+<aspect name="com.edgebud.business.projects.opportunities.Opportunity_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.edgebud.business.projects.comments.Comment_Roo_JavaBean"/>
+<aspect name="com.edgebud.business.companies.Company_Roo_ToString"/>
+<aspect name="com.edgebud.business.companies.Company_Roo_JavaBean"/>
+<aspect name="com.edgebud.business.projects.Project_Roo_ToString"/>
+<aspect name="com.edgebud.business.projects.Project_Roo_Configurable"/>
+<aspect name="com.edgebud.business.projects.Project_Roo_Json"/>
+<aspect name="com.edgebud.business.projects.opportunities.Opportunity_Roo_ToString"/>
+<aspect name="com.edgebud.business.companies.Company_Roo_Configurable"/>
+<aspect name="com.edgebud.business.projects.comments.Comment_Roo_ToString"/>
+<aspect name="com.edgebud.business.companies.Company_Roo_Jpa_Entity"/>
 </aspects>
 </aspectj>
 

@@ -76,3 +76,23 @@ help
 entity jpa --class ~.business.project.Project --testAutomatically true
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-10 00:20:31
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-10 12:31:21
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-11 11:39:34
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-16 14:20:50
+help
+perform clean test
+perform command --mavenCommand verify
+jpa setup --database POSTGRES --provider HIBERNATE --hostName mst-ica --userName eai --password integration --databaseName edgebud
+perform command --mavenCommand verify
+perform command --mavenCommand verify
+help
+entity jpa --class com.edgebud.project.opportunities.Opportunity
+perform tests 
+// [failed] test integration
+// [failed] test integration
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-16 17:52:12
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-16 17:52:35
+entity jpa --class ~.business.projects.opportunities.Opportunity
+test integration 
+test integration --entity ~.business.companies.Company
+test integration --entity ~.business.projects.Project
+test integration --entity ~.business.projects.comments.Comment

@@ -96,3 +96,10 @@ test integration
 test integration --entity ~.business.companies.Company
 test integration --entity ~.business.projects.Project
 test integration --entity ~.business.projects.comments.Comment
+field string --fieldName id --class ~.business.projects.opportunities.Opportunity --notNull --unique 
+field string --fieldName name --notNull true
+field string --fieldName description
+field set --type ~.business.projects.opportunities.Opportunity --fieldName opportunities --fetch EAGER 
+field reference --type ~.business.projects.opportunities.Opportunity --fieldName opportunities --class ~.business.projects.Project --fetch EAGER 
+field set --type ~.business.projects.opportunities.Opportunity --fieldName opportunities --fetch EAGER 
+field set --type ~.business.projects.opportunities.Opportunity --fieldName opportunities

@@ -7,6 +7,7 @@ import com.edgebud.business.companies.Company;
 import com.edgebud.business.projects.Project;
 import com.edgebud.business.projects.ProjectStatus;
 import com.edgebud.business.projects.comments.Comment;
+import com.edgebud.business.projects.opportunities.Opportunity;
 import java.util.Date;
 import java.util.Set;
 
@@ -82,6 +83,14 @@ privileged aspect Project_Roo_JavaBean {
     
     public void Project.setCompany(Company company) {
         this.company = company;
+    }
+    
+    public Set<Opportunity> Project.getOpportunities() {
+        return this.opportunities;
+    }
+    
+    public void Project.setOpportunities(Set<Opportunity> opportunities) {
+        this.opportunities = opportunities;
     }
     
 }

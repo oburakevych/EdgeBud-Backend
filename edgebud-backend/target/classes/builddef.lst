@@ -38,6 +38,7 @@ UTF-8
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/projects/Project_Roo_Jpa_Entity.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/projects/comments/Comment_Roo_JavaBean.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/companies/Company_Roo_Jpa_ActiveRecord.aj
+/Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/projects/opportunities/Opportunity_Roo_JavaBean.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/projects/Project_Roo_Json.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/projects/opportunities/Opportunity_Roo_Jpa_ActiveRecord.aj
 /Users/alexb/git/edgebud-backend/edgebud-backend/src/main/java/com/edgebud/business/projects/opportunities/Opportunity_Roo_Jpa_Entity.aj

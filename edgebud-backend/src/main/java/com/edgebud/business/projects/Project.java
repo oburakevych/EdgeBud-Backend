@@ -2,15 +2,22 @@ package com.edgebud.business.projects;
 
 import com.edgebud.business.companies.Company;
 import com.edgebud.business.projects.comments.Comment;
+import com.edgebud.business.projects.opportunities.Opportunity;
 
+import flexjson.JSONSerializer;
+
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -42,7 +49,7 @@ public class Project {
     @Size(max = 8192)
     private String description;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @OrderBy("created")
     private Set<Comment> comments = new HashSet<Comment>();
 
@@ -56,4 +63,11 @@ public class Project {
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Company company;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Opportunity> opportunities = new HashSet<Opportunity>();
+    
+    public static String toJsonArray(Collection<Project> collection) {
+        return new JSONSerializer().exclude("*.class").include("opportunities").serialize(collection);
+    }
 }

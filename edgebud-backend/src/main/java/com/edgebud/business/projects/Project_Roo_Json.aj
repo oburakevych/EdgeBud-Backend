@@ -20,10 +20,6 @@ privileged aspect Project_Roo_Json {
         return new JSONDeserializer<Project>().use(null, Project.class).deserialize(json);
     }
     
-    public static String Project.toJsonArray(Collection<Project> collection) {
-        return new JSONSerializer().exclude("*.class").serialize(collection);
-    }
-    
     public static Collection<Project> Project.fromJsonArrayToProjects(String json) {
         return new JSONDeserializer<List<Project>>().use(null, ArrayList.class).use("values", Project.class).deserialize(json);
     }

@@ -1,21 +1,21 @@
 <aspectj>
 <aspects>
+<aspect name="com.edgebud.business.projects.opportunities.OpportunityIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.edgebud.business.projects.opportunities.OpportunityIntegrationTest_Roo_Configurable"/>
+<aspect name="com.edgebud.business.companies.CompanyIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.edgebud.business.projects.comments.CommentDataOnDemand_Roo_Configurable"/>
+<aspect name="com.edgebud.business.projects.ProjectDataOnDemand_Roo_DataOnDemand"/>
 <aspect name="com.edgebud.business.projects.ProjectIntegrationTest_Roo_Configurable"/>
 <aspect name="com.edgebud.business.projects.ProjectIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.edgebud.business.projects.ProjectDataOnDemand_Roo_Configurable"/>
 <aspect name="com.edgebud.business.projects.opportunities.OpportunityDataOnDemand_Roo_Configurable"/>
 <aspect name="com.edgebud.business.projects.opportunities.OpportunityDataOnDemand_Roo_DataOnDemand"/>
-<aspect name="com.edgebud.business.projects.opportunities.OpportunityIntegrationTest_Roo_IntegrationTest"/>
-<aspect name="com.edgebud.business.projects.opportunities.OpportunityIntegrationTest_Roo_Configurable"/>
 <aspect name="com.edgebud.business.companies.CompanyIntegrationTest_Roo_Configurable"/>
-<aspect name="com.edgebud.business.companies.CompanyIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.edgebud.business.projects.comments.CommentDataOnDemand_Roo_DataOnDemand"/>
 <aspect name="com.edgebud.business.projects.comments.CommentIntegrationTest_Roo_IntegrationTest"/>
-<aspect name="com.edgebud.business.projects.comments.CommentDataOnDemand_Roo_Configurable"/>
 <aspect name="com.edgebud.business.companies.CompanyDataOnDemand_Roo_Configurable"/>
 <aspect name="com.edgebud.business.projects.comments.CommentIntegrationTest_Roo_Configurable"/>
 <aspect name="com.edgebud.business.companies.CompanyDataOnDemand_Roo_DataOnDemand"/>
-<aspect name="com.edgebud.business.projects.ProjectDataOnDemand_Roo_DataOnDemand"/>
 </aspects>
 </aspectj>
 

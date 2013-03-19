@@ -6,5 +6,13 @@
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__companyindex_id" messageCode="global_generic" url="/company/index" z="AR1g2DNXYf87rRq70sekyDj+jkk="/>
         </menu:category>
+        <menu:category id="c_company" z="tmJjNcrRZwdZqruFqwG+TB5GMek=">
+            <menu:item id="i_company_new" messageCode="global_menu_new" url="/companies?form" z="L4OjQc7RLe4yEwU4o+Qp2IuhIUI="/>
+            <menu:item id="i_company_list" messageCode="global_menu_list" url="/companies?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fsU3ANjqzBFHuLwX9nLvV4wrrfc="/>
+        </menu:category>
+        <menu:category id="c_comment" z="KpI9zqkdeE9bZ8zxvHTXU6Lm24s=">
+            <menu:item id="i_comment_new" messageCode="global_menu_new" url="/comments?form" z="q921JBcftknHR9qtTYaac8JDm7g="/>
+            <menu:item id="i_comment_list" messageCode="global_menu_list" url="/comments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z9n1g0FmjBLpyAPjZHhefDZLMtY="/>
+        </menu:category>
     </menu:menu>
 </div>

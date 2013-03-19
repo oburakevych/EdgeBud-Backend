@@ -20,10 +20,6 @@ privileged aspect Company_Roo_Json {
         return new JSONDeserializer<Company>().use(null, Company.class).deserialize(json);
     }
     
-    public static String Company.toJsonArray(Collection<Company> collection) {
-        return new JSONSerializer().exclude("*.class").serialize(collection);
-    }
-    
     public static Collection<Company> Company.fromJsonArrayToCompanys(String json) {
         return new JSONDeserializer<List<Company>>().use(null, ArrayList.class).use("values", Company.class).deserialize(json);
     }

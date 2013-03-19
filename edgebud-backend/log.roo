@@ -103,3 +103,81 @@ field set --type ~.business.projects.opportunities.Opportunity --fieldName oppor
 field reference --type ~.business.projects.opportunities.Opportunity --fieldName opportunities --class ~.business.projects.Project --fetch EAGER 
 field set --type ~.business.projects.opportunities.Opportunity --fieldName opportunities --fetch EAGER 
 field set --type ~.business.projects.opportunities.Opportunity --fieldName opportunities
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-16 21:11:12
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-18 21:56:13
+entity jpa --class ~.business.projects.challenges.Challenge
+field string --fieldName id --notNull true --unique true
+field string --fieldName name --notNull 
+field date --type java.util.Date --fieldName startDate
+field date --fieldName endDate --type java.util.Date 
+field string --fieldName shortDescription 
+entity jpa --class ~.business.projects.texts.Text
+field reference --type ~.business.projects.texts.Text --fieldName text
+field reference --type ~.business.projects.texts.Text --fieldName text --class ~.business.projects.challenges.Challenge
+entity jpa --class ~.business.projects.challenges.questionnaries.Questionnary
+entity jpa --class ~.business.projects.challenges.questionnaries.questions.Question
+entity jpa --class ~.business.projects.challenges.questionnaries.questions.answers.Answer
+// [failed] entity jpa --class ~.users.User 
+entity jpa --class ~.interpreters.Interpreter 
+field string --fieldName id --notNull true --unique true
+field string --fieldName firstName --notNull true
+field string --fieldName sureName --notNull true
+field string --fieldName email --notNull true --unique true
+field string --fieldName about 
+entity jpa --class ~.interpreters.accounts.Account
+field string --fieldName id --notNull --unique 
+field enum --type ~.interpreters.accounts.AccountType --fieldName type --notNull 
+field enum --type ~.interpreters.accounts.AccountStatus --fieldName status --notNull 
+field date --type java.util.Date --fieldName created
+field reference --type ~.interpreters.Interpreter --fieldName interpreter
+entity jpa --class ~.interpreters.accounts.workspaces.Workspace
+field string id --notNull 
+field string --fieldName name
+field string --fieldName description
+field set --type ~.business.projects.Project --fieldName projects
+field set --type ~.interpreters.accounts.workspaces.Workspace --fieldName workspaces --class ~.interpreters.accounts.Account
+field set --type ~.business.projects.challenges.questionnaries.Questionnary --fieldName questionaries --class ~.business.projects.challenges.Challenge
+// [failed] field string --fieldName id --notNull 
+field string --fieldName id --notNull --class ~.business.projects.challenges.questionnaries.Questionnary
+field string --fieldName name --notNull 
+field set --type ~.business.projects.challenges.questionnaries.questions.Question --fieldName questions
+// [failed] field string --fieldName id --notNull --unique 
+field string --fieldName id --notNull --unique --class ~.business.projects.challenges.questionnaries.questions.Question
+field string --fieldName question --notNull 
+field set --type ~.business.projects.challenges.questionnaries.questions.answers.Answer --fieldName answers
+field string --fieldName id --notNull --class ~.business.projects.challenges.questionnaries.questions.answers.Answer
+field string --fieldName answer
+field string --fieldName type
+field string --fieldName type --class ~.business.projects.challenges.questionnaries.questions.Question
+field reference --type ~.interpreters.Interpreter --fieldName owner --class ~.business.projects.challenges.questionnaries.questions.answers.Answer --notNull 
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-19 09:02:10
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-19 19:38:49
+entity jpa --class ~.business.companies.figures.Figure 
+field string id --notNull 
+field string --fieldName type 
+// [failed] field string key --notNull 
+// [failed] field string --fieldName key --notNull 
+// [failed] field string --fieldName key --notNull --column nameKey
+field string --fieldName name --notNull 
+// [failed] field string --fieldName value
+field set --type ~.business.companies.figures.Figure --fieldName figures 
+// [failed] field number --type java.math.BigDecimal --fieldName value --column "value_key" --permitReservedWords 
+field number --type java.math.BigDecimal --fieldName value --column "value_key" --permitReservedWords --class ~.business.projects.opportunities.Opportunity
+web mvc all --package com.edgebud.business.projects
+web mvc all --package com.edgebud.interpreters
+perform package
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-19 20:14:28
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-19 20:14:47
+web mvc controller --class ~.business.projects.Project
+web mvc json all 
+web mvc json add --class ~.business.projects.ProjectController --jsonObject ~.business.projects.Project 
+help
+help
+web mvc json add --jsonObject ~.business.projects.Project 
+web mvc json add --jsonObject ~.business.projects.ProjectController
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-19 20:22:27
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-19 20:22:45
+field number --class ~.business.companies.figures.Figure --type int --fieldName priority
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-20 00:14:45
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-20 00:14:59
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-20 08:34:10

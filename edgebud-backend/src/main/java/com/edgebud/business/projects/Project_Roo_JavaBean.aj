@@ -6,6 +6,7 @@ package com.edgebud.business.projects;
 import com.edgebud.business.companies.Company;
 import com.edgebud.business.projects.Project;
 import com.edgebud.business.projects.ProjectStatus;
+import com.edgebud.business.projects.challenges.Challenge;
 import com.edgebud.business.projects.comments.Comment;
 import com.edgebud.business.projects.opportunities.Opportunity;
 import java.util.Date;
@@ -107,6 +108,14 @@ privileged aspect Project_Roo_JavaBean {
     
     public void Project.setOpportunities(Set<Opportunity> opportunities) {
         this.opportunities = opportunities;
+    }
+    
+    public Set<Challenge> Project.getChallenges() {
+        return this.challenges;
+    }
+    
+    public void Project.setChallenges(Set<Challenge> challenges) {
+        this.challenges = challenges;
     }
     
 }

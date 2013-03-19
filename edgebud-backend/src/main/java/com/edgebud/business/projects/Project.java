@@ -1,6 +1,7 @@
 package com.edgebud.business.projects;
 
 import com.edgebud.business.companies.Company;
+import com.edgebud.business.projects.challenges.Challenge;
 import com.edgebud.business.projects.comments.Comment;
 import com.edgebud.business.projects.opportunities.Opportunity;
 
@@ -75,7 +76,10 @@ public class Project {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Opportunity> opportunities = new HashSet<Opportunity>();
     
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Challenge> challenges = new HashSet<Challenge>();
+    
     public static String toJsonArray(Collection<Project> collection) {
-        return new JSONSerializer().exclude("*.class").include("opportunities").serialize(collection);
+        return new JSONSerializer().exclude("*.class").include("opportunities", "challenges").serialize(collection);
     }
 }

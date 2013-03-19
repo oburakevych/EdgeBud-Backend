@@ -4,6 +4,8 @@
 package com.edgebud.business.companies;
 
 import com.edgebud.business.companies.Company;
+import com.edgebud.business.companies.figures.Figure;
+import java.util.Set;
 
 privileged aspect Company_Roo_JavaBean {
     
@@ -45,6 +47,14 @@ privileged aspect Company_Roo_JavaBean {
     
     public void Company.setUrl(String url) {
         this.url = url;
+    }
+    
+    public Set<Figure> Company.getFigures() {
+        return this.figures;
+    }
+    
+    public void Company.setFigures(Set<Figure> figures) {
+        this.figures = figures;
     }
     
 }

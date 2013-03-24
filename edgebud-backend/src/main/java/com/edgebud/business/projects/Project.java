@@ -33,10 +33,6 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJpaActiveRecord
 @RooJson
 public class Project {
-
-    @NotNull
-    private String id;
-
     @NotNull
     private String name;
 

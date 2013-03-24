@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect CompanyController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{id_}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{id}", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> CompanyController.showJson(@PathVariable("id_") Long id_) {
-        Company company = Company.findCompany(id_);
+    public ResponseEntity<String> CompanyController.showJson(@PathVariable("id") Long id) {
+        Company company = Company.findCompany(id);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (company == null) {
@@ -71,9 +71,9 @@ privileged aspect CompanyController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, headers = "Accept=application/json")
-    public ResponseEntity<String> CompanyController.deleteFromJson(@PathVariable("id_") Long id_) {
-        Company company = Company.findCompany(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> CompanyController.deleteFromJson(@PathVariable("id") Long id) {
+        Company company = Company.findCompany(id);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         if (company == null) {

@@ -1,7 +1,5 @@
 package com.edgebud.business.companies;
 
-import java.util.UUID;
-
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,10 +18,6 @@ public class CompanyController {
     @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createFromJson(@RequestBody String json) {
         Company company = Company.fromJsonToCompany(json);
-        
-        if (company.getId() == null) {
-        	company.setId(UUID.randomUUID().toString());
-        }
         
         company.persist();
         HttpHeaders headers = new HttpHeaders();

@@ -14,14 +14,6 @@ import java.util.Set;
 
 privileged aspect Project_Roo_JavaBean {
     
-    public String Project.getId() {
-        return this.id;
-    }
-    
-    public void Project.setId(String id) {
-        this.id = id;
-    }
-    
     public String Project.getName() {
         return this.name;
     }

@@ -22,10 +22,6 @@ import flexjson.JSONSerializer;
 @RooJpaActiveRecord
 @RooJson
 public class Company {
-
-    @NotNull
-    private String id;
-
     @NotNull
     @Size(max = 24)
     private String name;

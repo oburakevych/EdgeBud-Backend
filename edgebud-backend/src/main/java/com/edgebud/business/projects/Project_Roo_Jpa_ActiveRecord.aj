@@ -28,9 +28,9 @@ privileged aspect Project_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Project o", Project.class).getResultList();
     }
     
-    public static Project Project.findProject(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(Project.class, id_);
+    public static Project Project.findProject(Long id) {
+        if (id == null) return null;
+        return entityManager().find(Project.class, id);
     }
     
     public static List<Project> Project.findProjectEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect Project_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Project attached = Project.findProject(this.id_);
+            Project attached = Project.findProject(this.id);
             this.entityManager.remove(attached);
         }
     }

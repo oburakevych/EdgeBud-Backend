@@ -28,9 +28,9 @@ privileged aspect Company_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Company o", Company.class).getResultList();
     }
     
-    public static Company Company.findCompany(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(Company.class, id_);
+    public static Company Company.findCompany(Long id) {
+        if (id == null) return null;
+        return entityManager().find(Company.class, id);
     }
     
     public static List<Company> Company.findCompanyEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect Company_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Company attached = Company.findCompany(this.id_);
+            Company attached = Company.findCompany(this.id);
             this.entityManager.remove(attached);
         }
     }

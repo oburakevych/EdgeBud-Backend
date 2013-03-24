@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect CommentController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{id_}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{id}", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> CommentController.showJson(@PathVariable("id_") Long id_) {
-        Comment comment = Comment.findComment(id_);
+    public ResponseEntity<String> CommentController.showJson(@PathVariable("id") Long id) {
+        Comment comment = Comment.findComment(id);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (comment == null) {
@@ -80,9 +80,9 @@ privileged aspect CommentController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{id_}", method = RequestMethod.DELETE, headers = "Accept=application/json")
-    public ResponseEntity<String> CommentController.deleteFromJson(@PathVariable("id_") Long id_) {
-        Comment comment = Comment.findComment(id_);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> CommentController.deleteFromJson(@PathVariable("id") Long id) {
+        Comment comment = Comment.findComment(id);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         if (comment == null) {

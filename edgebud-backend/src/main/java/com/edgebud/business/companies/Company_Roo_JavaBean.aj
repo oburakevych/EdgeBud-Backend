@@ -9,14 +9,6 @@ import java.util.Set;
 
 privileged aspect Company_Roo_JavaBean {
     
-    public String Company.getId() {
-        return this.id;
-    }
-    
-    public void Company.setId(String id) {
-        this.id = id;
-    }
-    
     public String Company.getName() {
         return this.name;
     }

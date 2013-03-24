@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.edgebud.business.companies.Company;
+
 @RooWebJson(jsonObject = Project.class)
 @Controller
 @RequestMapping("/projects")
@@ -27,10 +29,17 @@ public class ProjectController {
     	
         Project project = Project.fromJsonToProject(json);
         
-        if (project.getId() == null) {
-        	project.setId(UUID.randomUUID().toString());
+        Company company = project.getCompany();
+        if (company != null) {
+        	project.setCompany(null);
         }
+        
         project.persist();
+        
+        project.setCompany(company);
+        
+        project.merge();
+        
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);

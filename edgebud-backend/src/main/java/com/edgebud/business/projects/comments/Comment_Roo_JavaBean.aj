@@ -8,14 +8,6 @@ import java.util.Date;
 
 privileged aspect Comment_Roo_JavaBean {
     
-    public String Comment.getId() {
-        return this.id;
-    }
-    
-    public void Comment.setId(String id) {
-        this.id = id;
-    }
-    
     public Date Comment.getCreated() {
         return this.created;
     }

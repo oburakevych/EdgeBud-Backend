@@ -28,9 +28,9 @@ privileged aspect Comment_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Comment o", Comment.class).getResultList();
     }
     
-    public static Comment Comment.findComment(Long id_) {
-        if (id_ == null) return null;
-        return entityManager().find(Comment.class, id_);
+    public static Comment Comment.findComment(Long id) {
+        if (id == null) return null;
+        return entityManager().find(Comment.class, id);
     }
     
     public static List<Comment> Comment.findCommentEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect Comment_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Comment attached = Comment.findComment(this.id_);
+            Comment attached = Comment.findComment(this.id);
             this.entityManager.remove(attached);
         }
     }
